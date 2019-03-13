@@ -6,9 +6,9 @@
 <view class='magcontainer'>
   <text>管理日记</text>
   <view class='mage_container'>
-    <view class='dairy' bindtap='onDairyTap'>
-      <text class="dairy_count">第几篇</text>
-      <text class="dairy_title">日记</text>
+    <view class='diary' bindtap='onDiaryTap'>
+      <text class="diary_count">第几篇</text>
+      <text class="diary_title">日记</text>
     </view>
     <view class='word'>
       <text class="word_count">185个字</text>
@@ -28,8 +28,8 @@
     <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill"></image>
   </view>
   <view class='settings_time'>
-    <text class='dairy_set'>日记默认发布发布方式</text>
-    <text class='dairy_public' bindtap='onPubTap'>匿名不公开</text>
+    <text class='diary_set'>日记默认发布发布方式</text>
+    <text class='diary_public' bindtap='onPubTap'>匿名不公开</text>
     <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill"></image>
   </view>
   <view class='settings_time'>

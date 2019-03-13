@@ -6,8 +6,8 @@ Page({
   data: {
     
   },
-  onDairyTap: function () {
-    console.log("onDairyTap"); /*父子页面的跳转 只有五级跳转*/
+  onDiaryTap: function () {
+    console.log("onDiaryTap"); /*父子页面的跳转 只有五级跳转*/
     wx.navigateTo({
       url: '../management/management',
     })
