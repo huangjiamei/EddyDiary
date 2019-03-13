@@ -1,0 +1,10 @@
+<!--pages/supplement/supplement.wxml-->
+<text>补写日记</text>
+<textarea>最想忘记的事情是什么</textarea>
+<view class="section section_gap">
+    <radio-group name="radio-group">
+      <label><radio value="radio1"/>私密</label>
+      <label><radio value="radio2"/>匿名公开</label>
+    </radio-group>
+  </view>
+  <button class='save'>保存</button>

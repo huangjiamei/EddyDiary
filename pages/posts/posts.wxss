@@ -1,0 +1,94 @@
+/* pages/posts/posts.wxss */
+.title{
+  background-color: #F0D0D0;
+  align-content: center
+}
+.search {
+  width: 80%;
+  
+}
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  margin-top: 100rpx;
+}
+
+.search_arr input {
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+
+.bc_text {
+  line-height: 68rpx;
+  height: 68rpx;
+  margin-top: 34rpx;
+}
+
+.sousuo {
+  margin-left: 15rpx;
+  margin-top: 100rpx;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+  border: 5px solid #d0d0d0;
+  border-radius: 10rpx;
+}
+.new_add{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 650rpx;
+}
+.page_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left: 25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.calender{
+  width: 50rpx;
+  height: 50rpx;
+}
+.close{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 400rpx;
+}
+.search_container{
+  border:1px; /*矩形框*/
+  width: 100%;
+  height: 180rpx;
+  background-color: #F0D0D0;
+}
+.moto-container{
+  border: 1px #706a6a;
+  position:fixed; 
+  bottom:0; 
+}
+.agency{
+height: 50rpx;
+width: 50rpx;
+margin-left: 100rpx;
+margin-right: 100rpx;
+}
+.my{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+}
+.stranger{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+}

@@ -1,0 +1,54 @@
+<view class='container'>
+  <view class="logo">
+    <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
+  </view>
+</view>
+<view class='magcontainer'>
+  <text>管理日记</text>
+  <view class='mage_container'>
+    <view class='dairy' bindtap='onDairyTap'>
+      <text class="dairy_count">第几篇</text>
+      <text class="dairy_title">日记</text>
+    </view>
+    <view class='word'>
+      <text class="word_count">185个字</text>
+      <text class="word_title">字数</text>
+    </view>
+  </view>
+</view>
+<view class='settings_call'>
+  <view class='settings_time'>
+    <text>提醒设置</text>
+    <text class='call_settings'>晚上九点</text>
+    <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill" bindtap='onTimeTap'></image>
+  </view>
+  <view class='settings_time'>
+    <text>高级设置</text>
+    <text class='call_settings'>提醒更灵活</text>
+    <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill"></image>
+  </view>
+  <view class='settings_time'>
+    <text class='dairy_set'>日记默认发布发布方式</text>
+    <text class='dairy_public' bindtap='onPubTap'>匿名不公开</text>
+    <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill"></image>
+  </view>
+  <view class='settings_time'>
+    <text>日记密码锁</text>
+    <image src='../../images/icon/wx_app_right.png' class='right_image' mode="aspectFill"></image>
+  </view>
+  <view class='settings_time'>
+    <text>关于喵咪日记</text>
+    <image src='../../images/icon/wx_app_right.png' class='right_image' mode="aspectFill"></image>
+  </view>
+  <view class='settings_time'>
+    <text>联系我们</text>
+    <image src='../../images/icon/wx_app_right.png' class='right_image' mode="aspectFill"></image>
+  </view>
+  <button class='button_set'>邀请好友写日记</button>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch"/>
+  </view>
+  </form>

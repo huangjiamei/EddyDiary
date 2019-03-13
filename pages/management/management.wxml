@@ -1,0 +1,33 @@
+<view class='wrap'>
+  <view class='date-show'>
+    <view class='left' bindtap='lastMonth'>
+      <image src="../../images/icon/wx_app_left.png" mode="aspectFill"></image>
+    </view>
+    <text class='year_and_month'>{{year}}年{{month}}月</text>
+    <view class='right' bindtap='nextMonth'>
+      <image src='../../images/icon/wx_app_right.png' mode="aspectFill"></image>
+    </view>
+  </view>
+  <view class='header'>
+    <view wx:for="{{date}}" class='{{(index==todayIndex)&&isTodayWeek?"weekMark":""}}'>{{item}}</view>
+  </view>
+  <view class='date-box'>
+    <view wx:for="{{dateArr}}" class='{{isToday==item.isToday?"nowDay":""}}' data='{{item.isToday}}'>
+      <view class='date-head'>
+        <view>{{item.dateNum}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='text_container'>
+  <text class='text'>最想忘记的事是什么</text>
+  <button bindtap="onTap" class='edit_button'>点击回答问题或者自由书写
+  </button>
+</view>
+<view class='text_area'>
+  <text class='text_title'>往年今日</text>
+  <textarea  bindblur='bindTextAreaBlur' auto-height>
+    <text class="textarea_empty">没有内容</text>
+  </textarea>
+</view>

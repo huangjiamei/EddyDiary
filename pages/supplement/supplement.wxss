@@ -1,0 +1,20 @@
+/* pages/supplement/supplement.wxss */
+.group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.public{
+ margin-left: 400rpx;
+}
+.avatar{
+  height: 50px;    
+  width: 50px;  
+  border: 10rpx #666;
+  border-radius: 25px;
+}
+.save{
+  width: 300rpx;
+  background-color: #F0D0D0;
+}

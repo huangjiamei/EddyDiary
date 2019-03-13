@@ -1,0 +1,9 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+    <text class="name">喵咪日记</text>
+    <!--image class="welcome_img" src='/images/beauty/1-1.jpg'></image -->
+    
+    <view class='moto-container' bind:tap='onTap'>
+      <text class='moto' >立刻体验</text>
+    </view>
+</view>

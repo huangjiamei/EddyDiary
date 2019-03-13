@@ -1,0 +1,14 @@
+{
+  "pages": [ 
+    "pages/welcome/welcome",
+    "pages/supplement/supplement",
+    "pages/personal/personal",
+    "pages/management/management",
+    "pages/posts/posts",
+    "pages/publish/publish",
+    "pages/timeselect/timeselect"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F0D0D0"
+  }
+}

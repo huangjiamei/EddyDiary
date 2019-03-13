@@ -1,0 +1,26 @@
+<!--pages/posts/posts.wxml-->
+<view class='title'>
+  <image class="calender" src='../../images/icon/wx_app_calender5.png'></image>
+  <text class='title_text'>Eddy 日记</text>
+</view>
+<view class='page_row' bindtap="suo">
+  <view class='search_container' bind:tap='onTap'>
+    <view class="search">
+      <view class="add_search">
+        <image class="new_add" src='../../images/icon/wx_app_add1.png'></image>
+
+        <view class="df search_arr">
+          <icon class="searchcion" size='20' type='search'></icon>
+          <image class="close" src='../../images/icon/wx_app_close.png'></image>
+          <input class="" disabled placeholder="Search" value="{{searchValue}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='moto-container' >
+  <image class='agency' src='../../images/icon/wx_app_agency.png'></image>
+  <image class='stranger' src='../../images/icon/wx_app_manyp.png'></image>
+  <image class='my' src='../../images/icon/wx_app_my.png' catchtap='onPostTap'></image>
+</view>
