@@ -1,12 +1,15 @@
 // pages/welcome/welcome.js
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+   
   },
+  
   onTap: function () {
     console.log("onTap"); /*父子页面的跳转 只有五级跳转*/
     wx.navigateTo({

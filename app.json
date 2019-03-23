@@ -6,7 +6,8 @@
     "pages/management/management",
     "pages/posts/posts",
     "pages/publish/publish",
-    "pages/timeselect/timeselect"
+    "pages/timeselect/timeselect",
+    "pages/adddiary/adddiary"
   ],
   "window": {
     "navigationBarBackgroundColor": "#F0D0D0"

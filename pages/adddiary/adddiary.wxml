@@ -1,0 +1,35 @@
+<view class="container">
+ <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">是否为私密日记</view>
+    <switch name="isPrivate" />
+  </view>
+  <view class="section">
+    <view class="section__title">日期</view>
+    <input name="date" placeholder="日期" />
+  </view>
+  <view class="section">
+    <view class="section__title">心情</view>
+    <input name="mood" placeholder="心情" />
+  </view>
+  <view class="section">
+    <view class="section__title">内容</view>
+    <input name="content" placeholder="内容" />
+  </view>
+   <view class="section">
+    <view class="section__title">地点</view>
+    <input name="location" placeholder="地点" />
+  </view>
+   <view class="section">
+    <view class="section__title">标签</view>
+    <input name="tag" placeholder="标签"/>
+  </view>
+  
+  
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>
+
+</view>
