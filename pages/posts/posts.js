@@ -5,8 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-
+    listData: []
+  },
+  //事件处理函数
+  onLoad: function () {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/diary',
+      method: 'GET',
+      data: {
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data);
+        var date = res.data;
+        that.setData({
+          listData: date
+        })
+      },
+      fail: function (res) {
+        console.log("...fail...");
+      }
+    })
   },
   onPostTap: function() {
     console.log("onPostTap"); /*父子页面的跳转 只有五级跳转*/
@@ -17,10 +39,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  /*
   onLoad: function(options) {
 
   },
-
+*/
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
