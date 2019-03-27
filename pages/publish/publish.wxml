@@ -1,3 +1,5 @@
-<textarea class="textarea-wrp" >私密
-<icon type='success_no_circle' size='40'></icon>
-</textarea>
+<radio-group class="radio-group" bindchange="radioChange">
+  <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" color='#F0D0D0'>
+    <text>{{item.value}}</text>
+  </radio>
+</radio-group>

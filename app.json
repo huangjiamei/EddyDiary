@@ -1,13 +1,17 @@
 {
   "pages": [
     "pages/welcome/welcome",
-    "pages/supplement/supplement",
-    "pages/personal/personal",
-    "pages/management/management",
+    "pages/otherpeople/otherpeople",
     "pages/posts/posts",
+    "pages/posts/diarydetail/diarydetail",
+    "pages/adddiary/adddiary",
+    "pages/personal/personal",
+    "pages/personal/setPassword/setPassword",
+    "pages/supplement/supplement",
+    "pages/management/management",
     "pages/publish/publish",
     "pages/timeselect/timeselect",
-    "pages/adddiary/adddiary"
+    "pages/otherpeople/otherpeople_detail/otherpeople_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#F0D0D0"

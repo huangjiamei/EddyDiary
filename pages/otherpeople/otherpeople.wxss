@@ -1,0 +1,39 @@
+.addimage{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 45%;
+  height: 300rpx;
+  background-color:  #fff;
+  border-radius:10px;
+  border:1px solid#fff;
+}
+.many{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap:wrap;
+}
+.add_diary_image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.name_time{
+  display: flex;
+  flex-direction: column;
+}
+.logo{
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+.addcomment{
+  display: flex;
+  flex-direction: column;
+}
+.comment_image{
+  margin-top: 80rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+

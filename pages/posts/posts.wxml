@@ -1,55 +1,44 @@
 <!--pages/posts/posts.wxml-->
+<import src="../../template/template.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+
 <view class='title'>
+<view class='titleall'>
+<view class='titlecalender'>
   <image class="calender" src='../../images/icon/wx_app_calender5.png'></image>
   <text class='title_text'>Eddy 日记</text>
+  </view>
+  <navigator url='../../pages/adddiary/adddiary'>
+  <image class="new_add" src='../../images/icon/wx_app_add1.png' />
+</navigator>
 </view>
-<view class='page_row' bindtap="suo">
-  <view class='search_container' bind:tap='onTap'>
+</view>
+<form bindsubmit="formSubmit">
+  <view class='page_row'>
     <view class="search">
-      <view class="add_search">
-        
-        <navigator url='../../pages/adddiary/adddiary'>
-        <image class="new_add" src='../../images/icon/wx_app_add1.png'>
-        </image>
-        </navigator>
-
-        <view class="df search_arr">
-          <icon class="searchcion" size='20' type='search'></icon>
-          <image class="close" src='../../images/icon/wx_app_close.png'></image>
-          <input class="" disabled placeholder="Search" value="{{searchValue}}" />
-        </view>
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class=" " name="id" placeholder="请输入关键字" value="{{searchValue}}" />
       </view>
     </view>
+    <button class='sousuo' formType="submit">搜索</button>
   </view>
+
+</form >
+
+
+<view class="context" bindtap='onDetailTap'> 
+<view class="allcontext"> 
+<view class='consist'>
+  <view class='alltime'>
+    <view class='time'>
+      <text class="date">27{{date}}</text>
+      <text class='week'>周三{{week}}</text>
+    </view>
+    <text class='clock'>12:22{{time}}</text>
+  </view>
+    <text class='content'>啊啊啊啊啊啊啊{{content}}</text>
+  </view>
+    <image src="/images/icon/wx_app_delete.png" bindtap="showtip" class='delete' />
 </view>
-
-<view class="table">
-  <view class="tr bg-w">
-    <view class="th">日期</view>
-    <view class="th">心情</view>
-    <view class="th ">内容</view>
-    <view class="th ">类别</view>
-  </view>
-
-  <block wx:for="{{listData}}" >
-    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
-      <view class="td">{{item.date}}</view>
-      <view class="td">{{item.mood}}</view>
-      <view class="td">{{item.content}}</view>
-      <view class="td">{{item.tag}}</view>
-    </view>
-    <view class="tr" wx:else>
-      <view class="td">{{item.date}}</view>
-      <view class="td">{{item.mood}}</view>
-      <view class="td">{{item.content}}</view>
-      <view class="td">{{item.tag}}</view>
-    </view>
-  </block>
-
-  </view>
-
-<view class='moto-container' >
-  <image class='agency' src='../../images/icon/wx_app_agency.png'></image>
-  <image class='stranger' src='../../images/icon/wx_app_manyp.png'></image>
-  <image class='my' src='../../images/icon/wx_app_my.png' catchtap='onPostTap'></image>
 </view>

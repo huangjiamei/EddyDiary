@@ -1,0 +1,17 @@
+<view class='history_select'>
+  <view class="logo">
+    <view class='photo'>
+      <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
+    </view>
+    <view class="name_time">
+      <open-data type="userNickName"></open-data>
+      <text class="show_time">03-25  17:00</text>
+    </view>
+  </view>
+  <textarea class="diary">今天心情好</textarea>
+</view>
+<view class="add">
+  <text class='other_say'>看看小伙伴会说些什么</text>
+  <button class='share'>分享</button>
+</view>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='say'>评论</button>

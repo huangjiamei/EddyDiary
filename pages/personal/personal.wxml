@@ -1,8 +1,11 @@
-<view class='container'>
-  <view class="logo">
-    <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
-  </view>
+<import src="../../template/template.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+
+<view class="logo">
+  <open-data type="userAvatarUrl" class="userinfo" id="userinfo">
+  </open-data>
 </view>
+
 <view class='magcontainer'>
   <text>管理日记</text>
   <view class='mage_container'>
@@ -19,7 +22,7 @@
 <view class='settings_call'>
   <view class='settings_time'>
     <text>提醒设置</text>
-    <text class='call_settings'>晚上九点</text>
+    <text class='call_settings'>{{time}}</text>
     <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill" bindtap='onTimeTap'></image>
   </view>
   <view class='settings_time'>
@@ -30,11 +33,15 @@
   <view class='settings_time'>
     <text class='diary_set'>日记默认发布发布方式</text>
     <text class='diary_public' bindtap='onPubTap'>匿名不公开</text>
-    <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill"></image>
+    <image src='../../images/icon/wx_app_right.png' class='call_image' mode="aspectFill" bindtap='onPublicTap'></image>
   </view>
   <view class='settings_time'>
     <text>日记密码锁</text>
-    <image src='../../images/icon/wx_app_right.png' class='right_image' mode="aspectFill"></image>
+    <form bindsubmit="formSubmit" bindreset="formReset" bindtap='onPwTap'>
+      <view class="section section_gap">
+        <switch name="switch" />
+      </view>
+    </form>
   </view>
   <view class='settings_time'>
     <text>关于喵咪日记</text>
@@ -44,11 +51,5 @@
     <text>联系我们</text>
     <image src='../../images/icon/wx_app_right.png' class='right_image' mode="aspectFill"></image>
   </view>
-  <button class='button_set'>邀请好友写日记</button>
+  <button class='button_set'  open-type="share">邀请好友写日记</button>
 </view>
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="section section_gap">
-    <view class="section__title">switch</view>
-    <switch name="switch"/>
-  </view>
-  </form>

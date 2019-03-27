@@ -1,6 +1,8 @@
-.textarea-wrp {
-  width: 100%;
-  height: 100rpx;
-  padding: 0 25rpx;
-  background-color: #fff;
+.radio-group {
+    border-bottom: 1px solid #ddd;
+}
+.radio {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 5px;
 }
