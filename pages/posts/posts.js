@@ -11,11 +11,12 @@ Page({
     result: '',
     state: '',
   },
+  //搜索日记
   formSubmit: function (e) {
     var that = this;
     var formData = e.detail.value.id; //获取表单所有name=id的值  
     wx.request({
-      url: 'http://localhost:8080/diary/search.php?id=' + formData,
+      url: 'http://localhost:8080/deletediary',
       data: formData,
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
@@ -32,17 +33,21 @@ Page({
     })
   },
   //事件处理函数
-  onLoad: function (options) {
+  //加载日记列表
+  onLoad: function () {
+    /*
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that=this
     that.setData({
       content: options.content
     })
+    */
+    template.tabbar("tabBar", 0, this)//0表示第一个tabbar
+    var that = this;
     wx.request({
       url: 'http://localhost:8080/diary',
       method: 'GET',
       data: {
-
       },
       header: {
         'content-type': 'application/json'

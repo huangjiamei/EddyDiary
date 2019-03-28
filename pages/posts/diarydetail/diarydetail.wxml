@@ -4,7 +4,7 @@
 <view class='consist'>
   <view class='alltime'>
     <view class='time'>
-      <text class="date">27{{date}}</text>
+      <text class="date">27{{listData}}</text>
       <text class='week'>周三{{week}}</text>
     </view>
     <text class='clock'>12:22{{time}}</text>

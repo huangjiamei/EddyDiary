@@ -26,19 +26,20 @@
 
 </form >
 
-
+<block wx:for = "{{listData}}">
 <view class="context" bindtap='onDetailTap'> 
 <view class="allcontext"> 
 <view class='consist'>
   <view class='alltime'>
     <view class='time'>
-      <text class="date">27{{date}}</text>
-      <text class='week'>周三{{week}}</text>
+      <text class="date">{{item.ddate}}</text>
+      <text class='week'>{{item.week}}</text>
     </view>
-    <text class='clock'>12:22{{time}}</text>
+    <text class='clock'>{{item.dtime}}</text>
   </view>
-    <text class='content'>啊啊啊啊啊啊啊{{content}}</text>
+    <text class='content'>{{item.content}}</text>
   </view>
     <image src="/images/icon/wx_app_delete.png" bindtap="showtip" class='delete' />
 </view>
 </view>
+</block>
