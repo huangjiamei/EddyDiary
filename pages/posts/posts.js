@@ -45,7 +45,7 @@ Page({
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/diary',
+      url: 'http://140.143.36.123:8020/diary',
       method: 'GET',
       data: {
       },
@@ -65,12 +65,24 @@ Page({
     })
   },
   onDetailTap: function () {
-    console.log("onDetailTap"); /*父子页面的跳转 只有五级跳转*/
+    console.log("onDetailTap"); 
     wx.navigateTo({
       url: '/pages/posts/diarydetail/diarydetail',
     })
   },
   
+  onAddTap: function () {
+    console.log("onAddTap"); 
+    wx.navigateTo({
+      url: '/pages/adddiary/adddiary',
+    })
+  },
+  onManageTap: function () {
+    console.log("onmanageTap");
+    wx.navigateTo({
+      url: '/pages/management/management',
+    })
+  },
   showtip: function () {
     wx.showModal({
       title: '提示',

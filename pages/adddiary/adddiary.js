@@ -43,7 +43,7 @@ showtip:function(){
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
     wx.request({
-      url: "http://localhost:8080/adddiary",
+      url: "http://140.143.36.123:8020/diary",
       method: "POST",
       data: {
         isPrivate: e.detail.value.isPrivate,
@@ -80,6 +80,14 @@ showtip:function(){
   },
   formReset: function () {
     console.log('form发生了reset事件')
-  }
+  },
+  onlocationTap: function () {
+    console.log("onlocationTap"); 
+    wx.navigateTo({
+      url: '/pages/location/location',
+    })
+  },
+
+
 
 })

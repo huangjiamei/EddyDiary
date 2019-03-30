@@ -2,17 +2,21 @@
 <import src="../../template/template.wxml" />
 <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
 
-<view class='title'>
-<view class='titleall'>
-<view class='titlecalender'>
-  <image class="calender" src='../../images/icon/wx_app_calender5.png'></image>
-  <text class='title_text'>Eddy 日记</text>
+<view class='testtest'>
+  <view class='test'>
+    <view>
+      <image class="calender" src='../../images/icon/wx_app_calender5.png' catchtap='onAddTap'></image>
+    </view>
+    <view>
+      <text class='title_text'>Eddy 日记</text>
+    </view>
+    <view>
+      <image class="new_add" src='../../images/icon/wx_app_add1.png' bindtap='onAddTap' />
+    </view>
   </view>
-  <navigator url='../../pages/adddiary/adddiary'>
-  <image class="new_add" src='../../images/icon/wx_app_add1.png' />
-</navigator>
 </view>
-</view>
+
+
 <form bindsubmit="formSubmit">
   <view class='page_row'>
     <view class="search">
@@ -24,22 +28,22 @@
     <button class='sousuo' formType="submit">搜索</button>
   </view>
 
-</form >
+</form>
 
-<block wx:for = "{{listData}}">
-<view class="context" bindtap='onDetailTap'> 
-<view class="allcontext"> 
-<view class='consist'>
-  <view class='alltime'>
-    <view class='time'>
-      <text class="date">{{item.ddate}}</text>
-      <text class='week'>{{item.week}}</text>
+<block wx:for="{{listData}}">
+  <view class="context" >
+    <view class="allcontext" >
+      <view class='consist' bindtap='onDetailTap'>
+        <view class='alltime'>
+          <view class='time'>
+            <text class="date">{{item.date}}</text>
+            <text class='week'>{{item.week}}</text>
+          </view>
+          <text class='clock'>{{item.time}}</text>
+        </view>
+        <text class='content'>{{item.content}}</text>
+      </view>
+      <image src="/images/icon/wx_app_delete.png" bindtap="showtip" class='delete' />
     </view>
-    <text class='clock'>{{item.dtime}}</text>
   </view>
-    <text class='content'>{{item.content}}</text>
-  </view>
-    <image src="/images/icon/wx_app_delete.png" bindtap="showtip" class='delete' />
-</view>
-</view>
 </block>

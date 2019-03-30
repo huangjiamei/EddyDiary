@@ -1,10 +1,11 @@
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**
@@ -15,8 +16,16 @@ Page({
     that.setData({
       content: options.content
     })
-  },
 
+    
+  },
+  onlocationTap: function () {
+    console.log("onlocationTap"); /*父子页面的跳转 只有五级跳转*/
+    wx.navigateTo({
+      url: '/pages/location/location',
+    })
+  },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

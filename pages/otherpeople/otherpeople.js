@@ -17,7 +17,7 @@ Page({
   onLoad: function (options) {
     template.tabbar("tabBar", 1, this)
     wx.request({
-      url: 'http://localhost:8080/diary',
+      url: 'http://140.143.36.123:8020/diary',
       method: 'GET',
       data: {
 

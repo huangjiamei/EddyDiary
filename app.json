@@ -1,5 +1,6 @@
 {
-  "pages": [
+  "pages": [  
+   
     "pages/welcome/welcome",
     "pages/otherpeople/otherpeople",
     "pages/posts/posts",
@@ -11,6 +12,8 @@
     "pages/management/management",
     "pages/publish/publish",
     "pages/timeselect/timeselect",
+    "pages/location/location",
+
     "pages/otherpeople/otherpeople_detail/otherpeople_detail"
   ],
   "window": {
