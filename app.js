@@ -22,6 +22,26 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              console.log(res);
+              var jsonData = {
+                code: res.code,
+                encryptedData: res.encryptedData,
+                iv: res.iv
+              };
+              //发送用户信息给后台
+              wx.request({
+                url: 'http://localhost:8020/login',
+                header: { 'Content-Type': 'application/json' },
+                method: 'POST',
+                data: jsonData,
+                success: res => {
+                  console.log(res.data)
+                  wx.hideLoading()
+                  this.setData({
+                    projectlist: res.data.content
+                  })
+                }
+              })
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
@@ -30,6 +50,7 @@ App({
               }
             }
           })
+         
         }
       }
     })

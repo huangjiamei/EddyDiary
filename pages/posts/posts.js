@@ -42,7 +42,7 @@ Page({
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
     wx.request({
-      url: 'http://140.143.36.123:8020/diary',
+      url: 'http://localhost:8020/diary',
       method: 'GET',
       data: {
       },
