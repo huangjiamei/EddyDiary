@@ -57,7 +57,10 @@ showtip:function(){
         mood: e.detail.value.mood,
         content: e.detail.value.content,
         location: e.detail.value.location,
-        tag: e.detail.value.tag
+        tag: e.detail.value.tag,
+        week:"Sun",
+        time:e.detail.time,
+        diarypicture:""
       },
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
