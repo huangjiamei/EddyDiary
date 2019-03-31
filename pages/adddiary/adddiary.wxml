@@ -6,6 +6,7 @@
         <view class="time" name="time">{{time}}</view>
       </view>
       <image class='location' src='../../images/icon/wx_app_location.png' bindtap='onlocationTap'>选择位置</image>
+      <text>{{keywords}}</text>
     </view>
     <view class="section">
       <input class="input" name="content" placeholder="你今天过的怎么样" />

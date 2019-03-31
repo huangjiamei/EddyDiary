@@ -31,7 +31,7 @@ Page({
   },
   bindSearch: function (e) {
     var keywords = e.target.dataset.keywords;
-    var url = '../poi/poi?keywords=' + keywords;
+    var url = '/pages/adddiary/adddiary?keywords=' + keywords;
     wx.redirectTo({
       url: url
     })

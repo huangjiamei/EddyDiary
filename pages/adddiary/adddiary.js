@@ -8,6 +8,10 @@ Page({
    
   },
   onLoad: function (options) {
+    var that = this;
+    that.setData({
+      keywords:options.keywords
+    })
     var time = util.formatMonth(new Date());
     this.setData({
       time: time,
@@ -17,6 +21,7 @@ Page({
       date: date,
     });
   },
+  
   gotoShow: function () {
     var _this = this
     wx.chooseImage({

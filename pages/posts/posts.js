@@ -61,7 +61,7 @@ Page({
       },
       fail: function (res) {
         console.log("...fail...");
-      }
+      },
     })
   },
   onDetailTap: function () {
@@ -94,6 +94,9 @@ Page({
       }
     })
   },
+
+  
+
   /**
    * 生命周期函数--监听页面加载
    */

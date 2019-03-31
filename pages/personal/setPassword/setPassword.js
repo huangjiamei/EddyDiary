@@ -9,7 +9,7 @@ Page({
     tipText: '请输入六位数字密码',
     // 用于页面样式的
     valueIsShow: false,
-    // 记录临时的值，点击按钮后再保存到对应变量中
+   
     currentValue: '',
     firstValue: '',
     secondValue: ''
@@ -39,10 +39,10 @@ Page({
       return
     }
     if (this.data.firstValue == '') {
-      // 调用组件中的方法，清除之前的值
+  
       this.passwordBox.clearCurrentValue() 
       this.passwordBox.toggleValue(false)
-      // 重置页面初始的数据，以及文案的修改
+    
       this.setData({
         firstValue: value,
         currentValue: '',
