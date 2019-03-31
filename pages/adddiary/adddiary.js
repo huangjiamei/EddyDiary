@@ -5,7 +5,8 @@ var util = require('../../utils/util.js')
 Page({
   data: {
     tempFilePaths: "../../images/icon/wx_app_add1.png",
-   
+    keywords:'',
+    listData: ["开心", "快乐", "轻松", "惊喜", "振奋", "幸福","自定义"]
   },
   onLoad: function (options) {
     var that = this;
@@ -74,13 +75,6 @@ showtip:function(){
       },
     })
     var that = this
-    wx.navigateTo({
-      url: '/pages/posts/posts?date=' + e.detail.value.date + '&content=' + e.detail.value.content+'&time='+e.detail.value.time+'&mood'+e.detail.value.mood
-    })
-    wx.navigateTo({
-      url: '/pages/posts/diarydetail/diarydetail?date=' + e.detail.value.date + '&content=' + e.detail.value.content + '&time=' + e.detail.value.time + '&mood' + e.detail.value.mood
-    })
-    console.log("sent message",e.detail.value.content)
 
   },
   formReset: function () {

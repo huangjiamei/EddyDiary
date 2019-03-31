@@ -10,6 +10,7 @@ Page({
     listData: [],
     result: '',
     state: '',
+    start_date:'',
   },
   //搜索日记
   formSubmit: function (e) {
@@ -44,6 +45,8 @@ Page({
     */
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
+  
+    
     wx.request({
       url: 'http://140.143.36.123:8020/diary',
       method: 'GET',
@@ -59,10 +62,13 @@ Page({
           listData: date
         })
       },
+      
       fail: function (res) {
         console.log("...fail...");
       },
     })
+    var that = this;
+    var start_date = that.date.replace(/-/g, "/");
   },
   onDetailTap: function () {
     console.log("onDetailTap"); 

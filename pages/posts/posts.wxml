@@ -36,6 +36,7 @@
       <view class='consist' bindtap='onDetailTap'>
         <view class='alltime'>
           <view class='time'>
+            <text class="date">{{start_date}}</text>
             <text class="date">{{item.date}}</text>
             <text class='week'>{{item.week}}</text>
           </view>

@@ -1,48 +1,99 @@
 
-.container{
-  width: 100%;
-  margin-right: 600rpx;
+
+.input {
+  width: 95%;
+  margin-left: 20rpx;
+  height: 300rpx;
+  background-color: #fff
+}
+
+button {
+  background-color: #f0d0d0;
+  margin-bottom: 10rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+}
+
+.location {
+  margin-left: 350rpx;
+  margin-top: 10rpx;
+  width: 54rpx;
+  height: 54rpx;
+}
+.keywords{
+  font-size: 20rpx;
+  color: #f0d0d0;
+  margin-right: 50rpx;
+}
+.formSubmit {
   margin-top: 10rpx;
 }
-.input{
-  margin-bottom: 300rpx;
-}
-button{
-  background-color:  #F0D0D0;
-  margin-bottom: 10rpx；
-}
-.location{
-  margin-left: 400rpx;
-  margin-top: 10rpx;
-  width: 50rpx;
-  height: 50rpx;
-}
-.formSubmit{
-  margin-top: 10rpx;
-}
-.alltime{
-  margin-top: 10rpx;
+
+.alltime {
+  margin-top: 40rpx;
   display: flex;
   flex-direction: row;
 }
-.date{
-  margin-top: 50rpx;
+
+.date {
+  margin-bottom: 10rpx;
   font-size: 80rpx;
 }
-.time{
-  margin-top: 50rpx;
+
+.time {
+  margin-bottom: 50rpx;
 }
-.message{
+
+.message {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  align-items:baseline;
+  align-items: baseline;
+  background-color: #fff;
+  width: 95%;
+  margin-top: 50rpx;
+  margin-left: 20rpx;
 }
-.add_picture{
-  border:50px solid rgb(253, 251, 251);/*矩形框*/
-  background-color:rgb(253, 251, 251);
-  border-radius:5px;/*圆角矩形*/
+
+.section {
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
+
+.add_picture {
+  border: 50px solid rgb(235, 231, 231);
+  background-color:  rgb(235, 231, 231);
+  border-radius: 5px;
   width: 100rpx;
   height: 100rpx;
   margin-bottom: 100rpx;
+  margin-left: 50rpx;
+}
+.table{
+  font:#f0d0d0;
+}
+.mood {
+  width: 100rpx;
+  border-radius: 15px;
+  border: 1px solid #f0d0d0;
+  text-align: center;
+}
+
+.allmood {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.table{
+ color:darkgray;
+ margin: 20rpx;
+}
+
+.grey_hover{
+ color: rgb(5, 5, 5);
+}
+
+.pink_hover{
+  background-color: #f0d0d0;
+  border: 1px solid #f0d0d0;
 }

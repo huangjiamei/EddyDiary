@@ -1,4 +1,34 @@
-<view class="container">
+<view class='table' hover-stay-time="3000000" hover-class="grey_hover">心情标签</view>
+<view class='allmood'>
+  <block wx:for="{{listData}}">
+    <view class='mood'  hover-stay-time="3000000" hover-class="pink_hover">{{item}}</view>
+  </block>
+</view>
+
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="message">
+      <view class='alltime'>
+        <view class="date" name="date">{{date}}</view>
+        <view class="time" name="time">{{time}}</view>
+      </view>
+      <image class='location' src='../../images/icon/wx_app_location.png' bindtap='onlocationTap'>选择位置</image>
+      <view class='keywords'>{{keywords}}</view>
+    </view>
+    <textarea class="input">
+      <input  name="content" placeholder="你今天过的怎么样" />
+    </textarea>
+  </view>
+  <image class='add_picture' src="{{tempFilePaths }}" mode="aspecFill" bindtap="gotoShow">选择位置</image>
+
+  <view class="btn-area">
+    <button formType="submit" bindtap="showtip">记录</button>
+  </view>
+</form>
+
+
+<!-- <view class="container">
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="message">
       <view class='alltime'>
@@ -11,9 +41,9 @@
     <view class="section">
       <input class="input" name="content" placeholder="你今天过的怎么样" />
     </view>
-     <image class='add_picture' src="{{tempFilePaths }}" mode="aspecFill" bindtap="gotoShow">选择位置</image>
+    <image class='add_picture' src="{{tempFilePaths }}" mode="aspecFill" bindtap="gotoShow">选择位置</image>
     <view class="btn-area">
       <button formType="submit" bindtap="showtip">记录</button>
     </view>
   </form>
-</view>
+</view> -->

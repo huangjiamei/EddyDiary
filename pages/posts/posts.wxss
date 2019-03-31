@@ -97,7 +97,6 @@
   height: 80rpx;
   background-color:  #f0d0d0;
   justify-content:space-around;
-
 }  
 .testtest{
   width:100%;
