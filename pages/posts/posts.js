@@ -55,8 +55,6 @@ Page({
         that.setData({
           listData: date
         })
-        // var that = this;
-        // var string = "123456";
         var string=date[0].date
         var start_date = string[8];
         var end_date = string[9];
@@ -112,7 +110,7 @@ Page({
   //     }
   //   })
   // },
-  delet: function (e) {
+  delete: function (e) {
     let that = this;
     wx.request({
       url: "http://140.143.36.123:8020/diary",

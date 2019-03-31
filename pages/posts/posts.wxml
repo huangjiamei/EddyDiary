@@ -38,7 +38,7 @@
           <view class='time'>
             <text class="date">{{finddate}}</text>
             <text class='week'>{{item.week}}</text>
-            <view class='location'>{{item.location}}</view>
+            
           </view>
           <text class='clock'>{{item.time}}</text>
         </view>
@@ -46,7 +46,8 @@
       </view>
       <view class='delete_location'>
       <image src="/images/icon/wx_location.png"  class='location'/>
-      <image src="/images/icon/wx_app_delete.png"  class='delete' />
+      <view class='location'>{{item.location}}</view>
+      <image src="/images/icon/wx_app_delete1.png"  class='delete' bindtap='delete'/>
       
     </view></view>
   </view>

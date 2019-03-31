@@ -12,6 +12,7 @@
       <view class='alltime'>
         <view  class="date" name="date">{{date}}</view>
         <view class="time" name="time">{{time}}</view>
+        <view class="week" name="week">{{week}}</view>
       </view>
       <image class='location' src='../../images/icon/wx_app_location.png' bindtap='onlocationTap'>选择位置</image>
       <view class='keywords'>{{keywords}}</view>
