@@ -10,7 +10,9 @@ Page({
     listData: [],
     result: '',
     state: '',
-    start_date:'',
+    start_date: '',
+    finddate:"",
+
   },
   //搜索日记
   formSubmit: function (e) {
@@ -35,18 +37,10 @@ Page({
   },
   //事件处理函数
   //加载日记列表
-  onLoad: function () {
-    /*
-    template.tabbar("tabBar", 0, this)//0表示第一个tabbar
-    var that=this
-    that.setData({
-      content: options.content
-    })
-    */
+  onLoad: function (e) {
+    
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
-  
-    
     wx.request({
       url: 'http://140.143.36.123:8020/diary',
       method: 'GET',
@@ -57,28 +51,39 @@ Page({
       },
       success: function (res) {
         console.log(res.data);
-        var date = res.data;
+        var date = res.data
         that.setData({
           listData: date
         })
+        // var that = this;
+        // var string = "123456";
+        var string=date[0].date
+        var start_date = string[8];
+        var end_date = string[9];
+        var finddate = start_date + end_date
+        that.setData({
+          finddate:finddate
+        })
+        console.log("test"+start_date+end_date);
       },
-      
+        
       fail: function (res) {
         console.log("...fail...");
       },
     })
-    var that = this;
-    var start_date = that.date.replace(/-/g, "/");
+    // var that = this;
+    // var start=that.date;
+    // var start_date = that.date.replace(/-/g, "/");
   },
   onDetailTap: function () {
-    console.log("onDetailTap"); 
+    console.log("onDetailTap");
     wx.navigateTo({
       url: '/pages/posts/diarydetail/diarydetail',
     })
   },
-  
+
   onAddTap: function () {
-    console.log("onAddTap"); 
+    console.log("onAddTap");
     wx.navigateTo({
       url: '/pages/adddiary/adddiary',
     })
@@ -89,74 +94,54 @@ Page({
       url: '/pages/management/management',
     })
   },
-  showtip: function () {
-    wx.showModal({
-      title: '提示',
-      content: '是否删除',
+  // showtip: function () {
+  //   wx.showModal({
+  //     title: '提示',
+  //     content: '是否删除',
+  //     success: function (res) {
+  //       if (res.confirm) {
+  //         var current = e.detail.value.diaryid;
+  //         console.log("dangqian"+current);
+  //         var list = this.data.list
+  //         list.splice(current, 1)
+  //         this.setData({
+  //           list: list
+  //         })
+  //         console.log("删除");
+  //       }
+  //     }
+  //   })
+  // },
+  delet: function (e) {
+    let that = this;
+    wx.request({
+      url: "http://140.143.36.123:8020/diary",
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'DELETE',
       success: function (res) {
-        if (res.save) {
-          console.log("删除");
+        console.log(res.data)
+        that.setData({
+          re: res.data,
+        })
+      wx.showModal({
+        title: '提示',
+        content: '是否删除',
+        success: function (res) {
+          if (res.confirm) {
+            var current = e.detail.value.diaryid;
+            console.log("dangqian" + current);
+            var list = this.data.list
+            list.splice(current, 1)
+            this.setData({
+              list: list
+            })
+            console.log("删除");
+          }
         }
+      })
       }
     })
   },
-
-  
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  /*
-  onLoad: function(options) {
-
-  },
-*/
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
-  }
 })

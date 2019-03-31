@@ -59,9 +59,13 @@
   margin-bottom: 20rpx;
   
 }
+.location{
+  width:54rpx;
+  height: 54rpx;
+}
 .delete{
   margin-left: 60rpx;
-  margin-top: 150rpx;
+  margin-top: 50rpx;
   width: 50rpx;
   height: 50rpx;
 }
@@ -89,6 +93,10 @@
   display: flex;
   flex-direction: row;
 }
+/* .delete_location{
+  display: flex;
+  flex-direction: column;
+} */
  .test{
   float:left;
   width:100%;

@@ -1,10 +1,11 @@
 {
   "pages": [  
+    
     "pages/welcome/welcome",
     "pages/otherpeople/otherpeople",
     "pages/posts/posts",
     "pages/posts/diarydetail/diarydetail",
-    "pages/adddiary/adddiary",
+   "pages/adddiary/adddiary",
     "pages/personal/personal",
     "pages/personal/setPassword/setPassword",
     "pages/supplement/supplement",

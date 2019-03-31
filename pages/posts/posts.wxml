@@ -29,22 +29,26 @@
   </view>
 
 </form>
-
+<form bindsubmit="delete">
 <block wx:for="{{listData}}">
   <view class="context" >
     <view class="allcontext" >
       <view class='consist' bindtap='onDetailTap'>
         <view class='alltime'>
           <view class='time'>
-            <text class="date">{{start_date}}</text>
-            <text class="date">{{item.date}}</text>
+            <text class="date">{{finddate}}</text>
             <text class='week'>{{item.week}}</text>
+            <view class='location'>{{item.location}}</view>
           </view>
           <text class='clock'>{{item.time}}</text>
         </view>
         <text class='content'>{{item.content}}</text>
       </view>
-      <image src="/images/icon/wx_app_delete.png" bindtap="showtip" class='delete' />
-    </view>
+      <view class='delete_location'>
+      <image src="/images/icon/wx_location.png"  class='location'/>
+      <image src="/images/icon/wx_app_delete.png"  class='delete' />
+      
+    </view></view>
   </view>
 </block>
+</form>
