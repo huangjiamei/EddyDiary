@@ -17,7 +17,7 @@
       <view class="name_time">
         <text>{{item.name}}</text>
         <!-- <open-data type="userNickName"></open-data> -->
-        <text class="show_time">{{item.date}}{{item.time}}</text>
+        <text class="show_time">{{item.date}}   {{item.time}}</text>
       </view>
     </view>
     <text class="diary">{{item.content}}</text>
