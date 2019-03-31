@@ -15,12 +15,19 @@
   flex-wrap:wrap;
 }
 .add_diary_image{
-  width: 100rpx;
-  height: 100rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.userinfo{
+  margin-top: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
 }
 .name_time{
   display: flex;
   flex-direction: column;
+  margin-left: 20rpx;
 }
 .logo{
   margin: 10rpx 10rpx 10rpx 10rpx;

@@ -12,6 +12,7 @@
       <view class='alltime'>
         <view  class="date" name="date">{{date}}</view>
         <view class="time" name="time">{{time}}</view>
+        <view class="week" name="week">{{week}}</view>
       </view>
       <image class='location' src='../../images/icon/wx_app_location.png' bindtap='onlocationTap'>选择位置</image>
       <view class='keywords'>{{keywords}}</view>
@@ -28,22 +29,3 @@
 </form>
 
 
-<!-- <view class="container">
-  <form bindsubmit="formSubmit" bindreset="formReset">
-    <view class="message">
-      <view class='alltime'>
-        <view class="date" name="date">{{date}}</view>
-        <view class="time" name="time">{{time}}</view>
-      </view>
-      <image class='location' src='../../images/icon/wx_app_location.png' bindtap='onlocationTap'>选择位置</image>
-      <text>{{keywords}}</text>
-    </view>
-    <view class="section">
-      <input class="input" name="content" placeholder="你今天过的怎么样" />
-    </view>
-    <image class='add_picture' src="{{tempFilePaths }}" mode="aspecFill" bindtap="gotoShow">选择位置</image>
-    <view class="btn-area">
-      <button formType="submit" bindtap="showtip">记录</button>
-    </view>
-  </form>
-</view> -->

@@ -60,19 +60,22 @@
   
 }
 .location{
-  width:54rpx;
-  height: 54rpx;
+  width:44rpx;
+  height: 44rpx;
 }
 .delete{
   margin-left: 60rpx;
   margin-top: 50rpx;
-  width: 50rpx;
-  height: 50rpx;
+  width: 44rpx;
+  height: 44rpx;
 }
 .date{
   margin-top: 50rpx;
   font-size: 60rpx;
   
+}
+.location{
+  font-size: 20rpx;
 }
 .content{
   display: flex;
