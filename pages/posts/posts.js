@@ -19,7 +19,7 @@ Page({
     var that = this;
     var formData = e.detail.value.id; //获取表单所有name=id的值  
     wx.request({
-      url: 'http://localhost:8080/deletediary',
+      url: 'http://140.143.36.123:8020/diary',
       data: formData,
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
@@ -42,7 +42,7 @@ Page({
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
     wx.request({
-      url: 'http://localhost:8020/diary',
+      url: 'http://140.143.36.123:8020/diary',
       method: 'GET',
       data: {
       },

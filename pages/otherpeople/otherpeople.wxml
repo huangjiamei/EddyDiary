@@ -1,30 +1,28 @@
 <import src="../../template/template.wxml" />
 <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+
+
 <view class='many'>
   <view class='addimage'>
     <image class="add_diary_image" src='../../images/icon/wx_app_add1.png'></image>
   </view>
-  <view class='addimage' wx:for-index="index" bindtap='onDetailTap'> 
-  <view class='addcomment'>
+  <block wx:for="{{listData}}">
+  <view class='addimage'  bindtap='onDetailTap'> 
+  <view class='addcomment' >
     <view class='logo'>
       <view class='add_diary_image'>
         <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
-        <image>{{publicerphoto}}</image>
+        <!-- <image class="userinfo" src="{{item.image}}"></image> -->
       </view>
       <view class="name_time">
-        <text>{{publishname}}</text>
-        <open-data type="userNickName"></open-data>
-        <text class="show_time">03-25{{date}}{{time}}17:00</text>
+        <text>{{item.name}}</text>
+        <!-- <open-data type="userNickName"></open-data> -->
+        <text class="show_time">{{item.date}}{{item.time}}</text>
       </view>
     </view>
-    <text class="diary">{{context}}今天心情好balabala</text>
+    <text class="diary">{{item.content}}</text>
       <image class="comment_image" src='../../images/icon/wx_app_message1.png' />
-    </view>
+    </view> 
   </view>
-  <view class='addimage'>
-    <image class="add_diary_image" src='../../images/icon/wx_app_add1.png'></image>
-  </view>
-  <view class='addimage'>
-    <image class="add_diary_image" src='../../images/icon/wx_app_add1.png'></image>
-  </view>
+  </block>
 </view>

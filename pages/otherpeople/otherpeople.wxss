@@ -15,8 +15,8 @@
   flex-wrap:wrap;
 }
 .add_diary_image{
-  width: 100rpx;
-  height: 100rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
 .name_time{
   display: flex;
