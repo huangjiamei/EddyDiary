@@ -26,7 +26,7 @@ App({
               var jsonData = {
                 code: res.code,
                 encryptedData: res.encryptedData,
-                iv: res.iv,
+                iv: res.iv
               };
               //发送用户信息给后台
               wx.request({
