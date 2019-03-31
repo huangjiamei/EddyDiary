@@ -11,8 +11,8 @@
   <view class='addcomment' >
     <view class='logo'>
       <view class='add_diary_image'>
-        <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
-        <!-- <image class="userinfo" src="{{item.image}}"></image> -->
+        <!-- <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data> -->
+        <image class="userinfo" src="{{item.image}}"></image>
       </view>
       <view class="name_time">
         <text>{{item.name}}</text>
