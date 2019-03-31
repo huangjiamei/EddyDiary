@@ -30,7 +30,7 @@ App({
               };
               //发送用户信息给后台
               wx.request({
-                url: 'http://140.143.36.123:8020/login',
+                url: 'http://localhost:8020/login',
                 header: { 'Content-Type': 'application/json' },
                 method: 'POST',
                 data: jsonData,
