@@ -1,8 +1,7 @@
 {
   "pages": [  
-    "pages/otherpeople/otherpeople",
     "pages/welcome/welcome",
-   
+   "pages/otherpeople/otherpeople",
     "pages/posts/posts",
     "pages/posts/diarydetail/diarydetail",
    "pages/adddiary/adddiary",

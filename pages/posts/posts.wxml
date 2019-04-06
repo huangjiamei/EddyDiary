@@ -29,27 +29,26 @@
   </view>
 
 </form>
-<form bindsubmit="delete">
-<block wx:for="{{listData}}">
-  <view class="context" >
-    <view class="allcontext" >
-      <view class='consist' bindtap='onDetailTap'>
-        <view class='alltime'>
-          <view class='time'>
-            <text class="date">{{finddate}}</text>
-            <text class='week'>{{item.week}}</text>
-            
+<!--<form bindsubmit="delete">-->
+  <block wx:for="{{listData}}">
+    <view class="context">
+      <view class="allcontext">
+        <view class='consist' bindtap='onDetailTap'>
+          <view class='alltime'>
+            <view class='time'>
+              <text class="date">{{finddate}}</text>
+              <text class='week'>{{item.week}}</text>
+            </view>
+            <text class='clock'>{{item.time}}</text>
           </view>
-          <text class='clock'>{{item.time}}</text>
+          <text class='content'>{{item.content}}</text>
         </view>
-        <text class='content'>{{item.content}}</text>
+        <view class='delete_location'>
+          <image src="/images/icon/wx_location.png" class='location' />
+          <view class='location'>{{item.location}}</view>
+          <image src="/images/icon/wx_app_delete1.png" class='delete' catchtap='delete' data-indexdel= "{{item.diaryid}}" />
+        </view>
       </view>
-      <view class='delete_location'>
-      <image src="/images/icon/wx_location.png"  class='location'/>
-      <view class='location'>{{item.location}}</view>
-      <image src="/images/icon/wx_app_delete1.png"  class='delete' bindtap='delete'/>
-      
-    </view></view>
-  </view>
-</block>
-</form>
+    </view>
+  </block>
+<!--</form>-->

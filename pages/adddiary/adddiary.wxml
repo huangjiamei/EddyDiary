@@ -15,7 +15,7 @@
         <view class="week" name="week">{{week}}</view>
       </view>
       <image class='location' src='../../images/icon/wx_app_location.png' bindtap='onlocationTap'>选择位置</image>
-      <view class='keywords'>{{keywords}}</view>
+     <!-- <view class='keywords'>{{keywords}}</view>-->
     </view>
     <textarea class="input">
       <input  name="content" placeholder="你今天过的怎么样" />

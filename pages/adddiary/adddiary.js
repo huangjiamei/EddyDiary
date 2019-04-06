@@ -5,14 +5,14 @@ var util = require('../../utils/util.js')
 Page({
   data: {
     tempFilePaths: "../../images/icon/wx_app_add1.png",
-    keywords:'',
+    //keywords:'',
     listData: ["开心", "快乐", "轻松", "惊喜", "振奋", "幸福","自定义"]
   },
   onLoad: function (options) {
     var that = this;
-    that.setData({
-      keywords:options.keywords
-    })
+    //that.setData({
+     // keywords:options.keywords
+    //})
     var time = util.formatMonth(new Date());
     this.setData({
       time: time,
@@ -49,24 +49,24 @@ showtip:function(){
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
     wx.request({
-      url: "http://140.143.36.123:8020/diary",
+      url: "http://140.143.36.123:8020/adddiary",
       method: "POST",
       data: {
-        isPrivate: e.detail.value.isPrivate,
-        date: e.detail.value.date,
-        mood: e.detail.value.mood,
-        content: e.detail.value.content,
-        location: e.detail.value.location,
-        tag: e.detail.value.tag,
-        week:"Sun",
-        time:e.detail.time,
-        diarypicture:""
+        isPrivate: "test",
+        date: "test",
+        mood: "test",
+        content: "test",
+        location: "test",
+        tag: "test",
+        week: "test",
+        time: "test",
+        diarypicture: "test"
       },
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
-        console.log(res.data);
+        //console.log(res.data);
         wx.navigateBack({
           delta: 1  //小程序关闭当前页面返回上一页面
         })

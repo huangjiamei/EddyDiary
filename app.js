@@ -21,7 +21,7 @@ App({
                 success: res => {
                   // 可以将 res 发送给后台解码出 unionId
                   this.globalData.userInfo = res.userInfo
-                  console.log(res);
+                  //console.log(res);
                   var jsonData = {
                     avatarUrl: res.userInfo.avatarUrl,
                     nickName: res.userInfo.nickName,
@@ -38,9 +38,11 @@ App({
                     success: res => {
                       console.log(res.data)
                       wx.hideLoading()
+                      /*
                       this.setData({
                         projectlist: res.data.content
                       })
+                      */
                     }
                   })
 
