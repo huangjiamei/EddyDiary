@@ -18,7 +18,7 @@ Page({
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
     wx.request({
-      url: 'http://140.143.36.123:8020/diary',
+      url: 'http://140.143.36.123:8030/diary',
       method: 'GET',
       data: {
       },
@@ -78,7 +78,7 @@ Page({
       success: function (res) {
         if (res.confirm) {
           wx.request({ //删除数据库中的内容
-            url: "http://140.143.36.123:8020/deletediary",
+            url: "http://140.143.36.123:8030/deletediary",
             method: 'POST',
             data: {
               diaryid:index
@@ -108,7 +108,7 @@ Page({
     var that = this;
     var formData = e.detail.value.id; //获取表单所有name=id的值  
     wx.request({
-      url: 'http://140.143.36.123:8020/diary',
+      url: 'http://140.143.36.123:8030/',
       data: formData,
       header: { 'Content-Type': 'application/json' },
       success: function (res) {

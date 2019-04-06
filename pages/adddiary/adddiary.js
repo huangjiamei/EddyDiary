@@ -49,7 +49,7 @@ showtip:function(){
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
     wx.request({
-      url: "http://140.143.36.123:8020/adddiary",
+      url: "http://140.143.36.123:8030/adddiary",
       method: "POST",
       data: {
         isPrivate: "test",
